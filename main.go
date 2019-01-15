@@ -122,11 +122,19 @@ func renderPlanets(debug bool) {
 		renderer.FillRect(&sdl.Rect{winX/2 - 5, winY/2 - 5, 74, 20})
 		gfx.StringColor(renderer, winX/2, winY/2, "GameOver", textWarnColor)
 	} else {
-		vector := planetarium.Vector{playerPlanet.Pos.X - float32(mouseX), playerPlanet.Pos.Y - float32(mouseY)}
-		direction := vector.Normalize()
-		newVector := planetarium.FromDirection(direction, 50.0)
+		// todo: fix
+		//vector := planetarium.Vector{playerPlanet.Pos.X - float32(mouseX), playerPlanet.Pos.Y - float32(mouseY)}
+		//direction := vector.Normalize()
+		//newVector := planetarium.FromDirection(direction, 50.0)
 
-		gfx.LineColor(renderer, int32(playerPlanet.Pos.X), int32(playerPlanet.Pos.Y), int32(playerPlanet.Pos.X+newVector.X), int32(playerPlanet.Pos.Y+newVector.Y), sdl.Color{200, 200, 255, 127})
+		//gfx.LineColor(
+		//	renderer,
+		//	int32(playerPlanet.Pos.X),
+		//	int32(playerPlanet.Pos.Y),
+		//	int32(playerPlanet.Pos.X+newVector.X),
+		//	int32(playerPlanet.Pos.Y+newVector.Y),
+		//	sdl.Color{200, 200, 255, 127},
+		//)
 	}
 
 	if helpEnabled {
